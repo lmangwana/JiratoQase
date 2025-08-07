@@ -1,0 +1,231 @@
+Description,Comments,Comments,Comments,Comments,Comments,Comments,Comments,Summary,Issue key,Issue id
+"*QA FEEDBACK*:
+Application: Mobile App
+ENVIRONMENTS: *UAT* - Android and iOS- 1.1.1 (47)
+
+
+
+There are *two UI issues* affecting the *header layout* across different screens:
+
+
+
+# *Insufficient Padding at the Top of the Header (Text Cut-Off)*
+
+* The header text appears *too close to the top*, causing some letters (e.g., the “f” in _Stay Informed_) to be *cut off*.
+* This is *more noticeable on Android* but also occurs on iOS.
+* The text should have *proper top padding* for better readability.
+
+
+
+# *Misaligned Notification Counter (Bell Icon)*
+
+* The *notification counter* (red badge with unread count) is *not properly positioned* relative to the bell icon.
+* It needs to be moved *slightly up and to the right* so that it appears *tangential to the bell icon*, as shown in the design reference.
+* The current positioning makes it *appear detached* from the icon.
+
+*Expected Behavior:*
+
+* The *header text* should have sufficient padding at the top to prevent any letters from being cut off.
+* The *notification counter* should be correctly positioned *above and slightly to the right* of the bell icon, aligning with the UI [design|https://www.figma.com/design/GsuPEHapwOlewdwuhlYUmN/VoteBud---Final-Ui-V2-Features?node-id=22828-134031&t=dC497D2dYXWUZLNz-4].
+
+
+!Screenshot 2025-03-05 at 18.11.59.png|width=553,height=194,alt=""Screenshot 2025-03-05 at 18.11.59.png""!
+
+!Screenshot_20250305_180352_VoteBud-uat.jpg|width=1080,height=2400,alt=""Screenshot_20250305_180352_VoteBud-uat.jpg""!","06/Mar/25 11:17 AM;636b66443cbe3dde78b56acb;[~accountid:712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7]  the figma designs are always based on the ios device, the appbar spacing uses the default OS taskbar spacing which is not the same across both OSs, I see your comparing with android spacing that uses the default android safe area, please check on this.
+
+cc: [~accountid:712020:2bc9a5f3-09c1-401d-b0dd-51ff421bba40]  [~accountid:6200cc305d18ad007298790c] ","27/Mar/25 10:30 AM;6200cc305d18ad007298790c;Designs are conforming to Native Standards of IOS and Android. It reflects differently in each. I think we can move on. ✅ 
+ CC: [~accountid:636b66443cbe3dde78b56acb] [~accountid:712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7] [~accountid:712020:2bc9a5f3-09c1-401d-b0dd-51ff421bba40] ",,,,,,Mobile App > Header UI Issues (Padding & Notification Counter Alignment),IV-1804,185278
+"The Shadow Styles have updated slightly. 
+(The colour opacity went up with 3%) Check other property settings on the left aswell.
+
+Here are the style Settings:
+
+Top App Bar Elevation:
+
+!Screenshot 2025-03-10 at 17.18.15.png|width=777,height=400,alt=""Screenshot 2025-03-10 at 17.18.15.png""!
+
+
+Bottom Nav Elevation:
+
+!Screenshot 2025-03-10 at 17.17.45.png|width=543,height=271,alt=""Screenshot 2025-03-10 at 17.17.45.png""!","11/Mar/25 11:04 AM;6200cc305d18ad007298790c;Hey [~accountid:636b66443cbe3dde78b56acb] I hope this helps. 
+
+Header shadow style: Example [here|https://www.figma.com/design/GsuPEHapwOlewdwuhlYUmN/VoteBud---Final-Ui-V2-Features?node-id=23653-114115&t=u6eZlm5XXlhP6aH4-11]
+
+!Header shadow.png|width=1180,height=560,alt=""Header shadow.png""!
+
+
+
+Drawers shadow style: Example [Here|https://www.figma.com/design/GsuPEHapwOlewdwuhlYUmN/VoteBud---Final-Ui-V2-Features?node-id=23653-114328&t=u6eZlm5XXlhP6aH4-11]
+
+!Drawers shadow.png|width=1078,height=697,alt=""Drawers shadow.png""!","14/Mar/25 10:50 AM;6200cc305d18ad007298790c;[~accountid:712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7] 
+
+!Screenshot 2025-03-14 at 10.49.11.png|width=1747,height=749,alt=""Screenshot 2025-03-14 at 10.49.11.png""!","14/Mar/25 10:50 AM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;[~accountid:636b66443cbe3dde78b56acb] difficult to tell the applied shadow with a naked eye. Please share a screenshot of the backend where this was applied: (The colour opacity went up with 3%) Check other property settings on the left as well.
+
+[~accountid:6200cc305d18ad007298790c]  has added a side by side comparison with the designs and the actual screenshot of the UI. [~accountid:712020:2bc9a5f3-09c1-401d-b0dd-51ff421bba40] please advise.
+
+","25/Mar/25 12:50 PM;6200cc305d18ad007298790c;[~accountid:636b66443cbe3dde78b56acb] 
+It seems the shadows have not been applied or it is not showing on the app as it is on the designs. See the screenshot below of the comparison. 
+
+CC: 
+[~accountid:712020:2bc9a5f3-09c1-401d-b0dd-51ff421bba40] [~accountid:712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7] ","25/Mar/25 1:33 PM;636b66443cbe3dde78b56acb;!image-20250325-112741.png|width=463,height=287,alt=""image-20250325-112741.png""!
+
+!image-20250325-112846.png|width=789,height=273,alt=""image-20250325-112846.png""!
+
+[~accountid:6200cc305d18ad007298790c]  the exact styling from Figma is what was translated in the designs based on the framework, please check above the Figma styles and the raw code. Please do note that shadow designs might appear different due to platforms and design tools, based on the code, we are using the exact stylings
+
+cc: [~accountid:712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7] ",25/Mar/25 3:37 PM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;[~accountid:636b66443cbe3dde78b56acb] noted. Will move this to ready for prod. ,,Mobile App > Headers & Shadows > Update Shadow Headers and Drawers,IV-1828,185616
+"*QA FEEDBACK*:
+Application: Mobile App
+ENVIRONMENTS: *PROD* - Android and iOS- 1.1.1 (109)
+
+
+
+*Steps to Reproduce:*
+
+# Navigate to *Polls* section in the mobile app.
+# Select a poll.
+# Click on the *downvote icon* (flag).
+# Choose *“Offensive or inappropriate”* from the list of reasons.
+# Observe the behaviour.
+
+*Expected Result:*
+
+* A short loader should appear.
+* User should be returned to the poll.
+* The *downvote icon* should turn *red*, indicating the poll has been flagged successfully.
+
+
+
+*Actual Result:*
+
+* A loader appears briefly.
+* No visual confirmation is shown to indicate the poll has been flagged.
+
+!ScreenRecording_03-19-2025 10-08-09_1.MOV|width=886,height=1920,alt=""ScreenRecording_03-19-2025 10-08-09_1.MOV""!","25/Mar/25 10:17 AM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;*QA FEEDBACK*:
+Application: Mobile App
+ENVIRONMENTS: *UAT* - Android and iOS- 1.1.1 (50)
+
+
+*Expected Result:*
+
+* A short loader should appear. ✅ 
+* User should be returned to the poll. ✅ 
+* The *downvote icon* should turn *red*, indicating the poll has been flagged successfully. ✅ 
+
+[^ScreenRecording_03-25-2025 10-14-50_1.MP4]
+
+
+",,,,,,,Mobile App > Polls > Flag Poll functionality not working,IV-1844,186243
+"*QA FEEDBACK*:
+Application: Mobile App
+ENVIRONMENTS: *UAT* - Android and iOS- 1.1.1 (49)
+
+
+
+# *Delete Account Action Not Completing (Android & iOS):*
+
+After the user clicks the *Delete Account* button and confirms, the app shows a loader but *does not log the user out or complete the account deletion process*. The screen stays in a loading state, and no feedback is provided to confirm whether the deletion was successful or not.
+
+# *iOS UI Issue – Input Field Hidden by Keyboard:*
+
+On iOS devices, when the user tries to enter a reason under the *“Tell us why”* field, the on-screen keyboard pops up and *obscures the input field*. The user is unable to dismiss the keyboard easily, preventing them from returning back to the card view and completing the rest of the *Delete Account* flow.
+
+
+*Steps to Reproduce (Issue 1 – Delete Action Not Completing):*
+
+# Navigate to *Profile > Delete Account*.
+
+# Enter a reason or select any reason.
+
+# Tap on *Delete Account* and confirm.
+
+# Observe that a loader appears, but the user remains on the card and is not logged out.
+
+
+
+*Steps to Reproduce (Issue 2 – iOS Input Field Hidden):*
+
+# Navigate to *Profile > Delete Account* on an *iOS device*.
+
+# Tap on the *“Tell us why”* text field.
+
+# Observe that the keyboard pops up and *hides the input field*.
+
+# User cannot easily scroll to view what they’re typing or proceed further with the flow.
+
+
+
+*Expected Result:*
+
+* After tapping *Delete Account*, the user should be logged out and redirected to the login or welcome screen.
+
+* On iOS, the input field should remain visible when the keyboard appears, or the screen should scroll accordingly to allow users to complete their input and proceed.
+
+
+
+*Actual Result:*
+
+* Delete Account button only triggers a loader with no user logout or feedback.
+
+* On iOS, the keyboard obstructs the input field, breaking the flow and usability.
+
+!ScreenRecording_03-18-2025 13-56-12_1.MOV|width=886,height=1920,alt=""ScreenRecording_03-18-2025 13-56-12_1.MOV""!","25/Mar/25 10:34 AM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;*QA FEEDBACK*:
+Application: Mobile App
+ENVIRONMENTS: *UAT* - Android and iOS- 1.1.1 (50)
+
+
+
+*Expected Result:*
+
+* After tapping *Delete Account*, the user should be logged out and redirected to the login or welcome screen. ✅ 
+
+* On iOS, the input field should remain visible when the keyboard appears, or the screen should scroll accordingly to allow users to complete their input and proceed. ✅ 
+
+[^ScreenRecording_03-25-2025 10-29-55_1.MP4]",,,,,,,Mobile App > Delete Account > Delete Account flow issues – App hangs after deletion & iOS keyboard hides input field,IV-1845,186245
+"[Airtable Link|https://airtable.com/appkzOc5HsMC1X89q/pagrrBCOCu2sN9nVV?detail=eyJwYWdlSWQiOiJwYWdiUUc3NzlHUXJON0VBcCIsInJvd0lkIjoicmVjdlJaRkxTSHVFbTQweTkiLCJzaG93Q29tbWVudHMiOmZhbHNlLCJxdWVyeU9yaWdpbkhpbnQiOnsidHlwZSI6InBhZ2VFbGVtZW50IiwiZWxlbWVudElkIjoicGVsVFdLY3E2dGRuOVA3bWYiLCJxdWVyeUNvbnRhaW5lcklkIjoicGVsMHdYSWh1aDhDaU84cXYifX0]
+
+The goal of this feature is threefold.
+
+# Reduce AI credit consumption.
+# Make it easier for editors to explore bills in legislation interface.
+# Automate issue assigning to bills.
+
+
+
+The goals above will be accomplished by passing all bills through a 3-step process.
+
+* AI Bill Filter - 3 Step Process
+** Step 1
+*** Review bill for importance
+**** Assign Weighting
+**** IF low weighting, assign issue “Filtered”
+** Step 2
+*** Bills that are not filtered
+**** Assign AI Generated Issue
+**** Assign Issues using AI
+** Step 3
+*** Editors and Users can create AI summaries on demand
+**** Editors would have button in Airtable
+**** Users would create upon opening page for first time.
+
+UAC:
+
+* Ensure the AI credits usage has decreased","04/Feb/25 10:37 AM;636b66443cbe3dde78b56acb;[^jan.csv]
+
+above is January usage, that we will compare with Feb.
+
+!image-20250204-083732.png|width=3440,height=1440,alt=""image-20250204-083732.png""!",12/Feb/25 5:09 PM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;QA note: Leaving this ticket on here so that we can compare February’s usage and March’s usage to see if there is a decrease in usage. ,"25/Mar/25 9:10 AM;636b66443cbe3dde78b56acb;!image-20250325-070943.png|width=3440,height=1440,alt=""image-20250325-070943.png""!
+
+[~accountid:712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7]  hope this helps 👍 ",25/Mar/25 10:41 AM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;Hey [~accountid:636b66443cbe3dde78b56acb] could you please share screenshot for _Feb_ as well in order to compare Jan > Feb > Mar usage trend,"25/Mar/25 1:40 PM;636b66443cbe3dde78b56acb;Sure, here is Febs 
+
+
+!image-20250325-114032.png|width=3440,height=1440,alt=""image-20250325-114032.png""!","25/Mar/25 3:17 PM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;*QA FEEDBACK*:
+
+
+UAC:
+
+* Ensure the AI credits usage has decreased✅ 
+
+There has been a decrease in AI credit usage between Feb and March, though there was an increase in credit usage between Jan and Feb
+
+AI credit usage: Jan = 251.80, Feb = 448.92, March = 305.90","26/Mar/25 11:03 AM;712020:3dd0373c-06af-4ed1-8e03-4b3fb778d1f7;As per discussion with Bavon: In Feb number of builds had increased hence increase from Jan to Feb, but now things have normalised hence the decrease from Feb to March. UAC met.",Mobile App > Bills > Optimize AI Credit Usage,IV-1735,183808
