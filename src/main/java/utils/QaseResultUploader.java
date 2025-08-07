@@ -78,23 +78,4 @@ public class QaseResultUploader {
         }
     }
 
-//    public static void main(String[] args) {
-//        // 🔒 Replace with a valid Qase Run ID that is currently active
-//        // or move RUN_ID to be passed dynamically if needed
-//
-//        // 📎 Create test attachment (make sure the file exists!)
-//        File testFile = new File("screenshots/test-failure.png"); // adjust path if needed
-//
-//        if (!testFile.exists()) {
-//            System.err.println("❌ Test file not found: " + testFile.getAbsolutePath());
-//            return;
-//        }
-//
-//        // 🧪 Call the upload method
-//        uploadResultWithAttachments(
-//                "Sample upload test from Java",
-//                "passed", // OR "failed"
-//                List.of(testFile)
-//        );
-//    }
 }
