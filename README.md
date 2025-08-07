@@ -20,17 +20,18 @@ It also supports automated Qase Run creation and result uploads — including at
 
 ---
 
-## Project Structure
+##  Project Structure
 
-src/
-├── main/java
-│    ├── model/           # JiraTicket POJO and data models
-│    ├── parser/          # JiraCsvParser
-│    ├── qase/            # QaseCsvbuilder
-│    ├── utils/           # AttachmentExtractor, AttachmentMapper, Qase API utilities
-│    └── Main.java        # Entry point
-├── main/resources        # Sample Jira CSVs and configs
-└── main/output           # Generated Qase CSV exports
+<pre>
+src/test/java/
+├── base/        # Base URI setup
+├── config/      # API key and base URL
+├── endpoints/   # All endpoint request logic
+├── tests/       # TestNG test cases
+testng.xml       # Test suite config
+pom.xml          # Maven dependencies
+</pre>
+
 
 ---
 
